@@ -8,7 +8,7 @@ To start a game, you have to open your Terminal and run the "game.rb" file, usin
 
 Once launched, the program will ask each player, the name they want to be called.
 
-Then you will have a grid with 9 boxes, each one associated to a code ("A1", "A2", etc ... until "C3") such as below :
+Then you will have a grid with 9 boxes, each one associated to a code ("A1", "A2", "A3", "B1" etc ... until "C3") such as below :
 
 |--------------|
 | A1 | A2 | A3 |

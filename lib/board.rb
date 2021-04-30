@@ -15,7 +15,6 @@ class Board
     @@boxes << @C3 = "C3"
   end
 
-
   def boxes
     return @@boxes
   end

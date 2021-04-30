@@ -11,6 +11,8 @@ class Game
     return @board
   end
 
+############################## The player can choose which box he wants to use #######################################
+
   def action_choice(a_player)
     print ("#{a_player}").blue
     puts ", it is your turn to play."
@@ -26,6 +28,8 @@ class Game
     end
     return choice
   end
+
+############################### Method to tick the box selected by the player ######################################
 
   def action(action_choice, a_player)
     case action_choice
@@ -52,12 +56,16 @@ class Game
     board.boxes.each {|dead| if action_choice == dead then board.boxes.delete(dead) end}
   end
 
+################################ A turn for each player #######################################
+
   def tour
     action(action_choice(player1.name), player1)
     if is_over? != true
       action(action_choice(player2.name), player2)
     end
   end
+
+################################ Cases in which player1 wins #######################################
 
 def winner_player1
   if @board.A1 == "X " && @board.A2 == "X " && @board.A3 == "X "
@@ -81,6 +89,8 @@ def winner_player1
   end
 end
 
+################################ Cases in which player2 wins #######################################
+
   def winner_player2
     if @board.A1 == "O " && @board.A2 == "O " && @board.A3 == "O "
       return true    
@@ -103,6 +113,8 @@ end
     end
   end
 
+################################ Checks if the game is over ################################ 
+
   def is_over?
     if winner_player1 == true
       return true
@@ -114,6 +126,8 @@ end
       return false
     end
   end
+
+################################ Puts a message to explain how the game ends ################################ 
 
   def end
     if winner_player1 == true
