@@ -3,6 +3,8 @@ class Board
   attr_accessor :A1, :A2, :A3, :B1, :B2, :B3, :C1, :C2, :C3
   @@boxes = Array.new
 
+######################### Set default value of each box to its corresponding reference #########################
+
   def initialize
     @@boxes << @A1 = "A1"
     @@boxes << @A2 = "A2"
@@ -15,9 +17,13 @@ class Board
     @@boxes << @C3 = "C3"
   end
 
+######################### Defining a way to call the board #########################
+
   def boxes
     return @@boxes
   end
+
+######################### Drawing the board that will be displayed on every turn #########################
 
   def the_board
     puts " --------------" 
@@ -28,7 +34,5 @@ class Board
     puts "| #{@C1} | #{@C2} | #{@C3} |"
     puts " --------------"
   end
-  
-
 
 end
